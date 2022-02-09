@@ -1,6 +1,6 @@
 ﻿#define MUN_ESPERANZA
 #define AMB_PRODUCCION
-#define MOD_MOVPARK
+#define MOD_COMPRAS
 
 namespace APPNotions
 {
