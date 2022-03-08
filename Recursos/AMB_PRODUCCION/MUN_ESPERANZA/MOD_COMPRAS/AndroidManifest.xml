@@ -20,6 +20,10 @@
 	<permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
 	<queries>
+ 	  <package android:name = "com.android.chrome" />
+	  <package android:name = "com.chrome.beta" />
+ 	  <package android:name = "com.chrome.dev" />
+	  <package android:name = "com.google.android.apps.chrome" />
 	  <intent>
 	    <action android:name="android.intent.action.VIEW" />
 	    <data android:scheme="http"/>

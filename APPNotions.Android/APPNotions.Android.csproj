@@ -17,7 +17,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0.99</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -111,7 +111,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>CD $(SolutionDir)
-CALL copiarRecursos.bat</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>

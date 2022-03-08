@@ -44,11 +44,11 @@ namespace APPNotions
             {
                 try
                 {
-                    var uri = new Uri(e.Url);
-                    Browser.OpenAsync(uri, BrowserLaunchMode.External);
+                    Launcher.OpenAsync(new Uri(e.Url));
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Navegador.Source = "https://www.google.com/search?q=" + ex.Message;
                 }
                 //Navegador.GoBack();
             }
