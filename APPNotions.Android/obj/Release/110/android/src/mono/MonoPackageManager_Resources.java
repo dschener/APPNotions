@@ -4,7 +4,6 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "APPNotions.Android.dll" comes first in this list. */
 		"Xamarin.AndroidX.AppCompat.AppCompatResources.dll",
 		"Xamarin.AndroidX.AppCompat.dll",
-		"Xamarin.AndroidX.Browser.dll",
 		"Xamarin.AndroidX.CardView.dll",
 		"Xamarin.AndroidX.CoordinatorLayout.dll",
 		"Xamarin.AndroidX.Core.dll",

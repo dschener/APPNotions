@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v11.0.99": {
+    "MonoAndroid,Version=v11.0": {
       "Com.OneSignal/3.10.6": {
         "type": "package",
         "dependencies": {
@@ -4243,7 +4243,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v11.0.99": [
+    "MonoAndroid,Version=v11.0": [
       "APPNotions >= 1.0.0",
       "Com.OneSignal >= 3.10.6",
       "Xamarin.AndroidX.Core >= 1.6.0.3",
@@ -4275,14 +4275,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid11.0.99"
+        "monoandroid11.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid11.0.99": {
+        "monoandroid11.0": {
           "projectReferences": {
             "M:\\_David\\APPNotions\\APPNotions\\APPNotions.csproj": {
               "projectPath": "M:\\_David\\APPNotions\\APPNotions\\APPNotions.csproj"
@@ -4292,7 +4292,7 @@
       }
     },
     "frameworks": {
-      "monoandroid11.0.99": {
+      "monoandroid11.0": {
         "dependencies": {
           "Com.OneSignal": {
             "target": "Package",

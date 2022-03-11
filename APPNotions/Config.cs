@@ -1,5 +1,5 @@
-﻿#define MUN_ESPERANZA
-#define AMB_PRODUCCION
+﻿#define MUN_DESARROLLO
+#define AMB_DESARROLLO
 #define MOD_COMPRAS
 
 namespace APPNotions

@@ -27,7 +27,7 @@ namespace APPNotions
             }
         }
 
-        private void Navegador_Navigating(object sender, WebNavigatedEventArgs e)
+        async void Navegador_Navigating(object sender, WebNavigatingEventArgs e)
         {
             if (e.Url.Contains("logout"))
             {
@@ -40,17 +40,17 @@ namespace APPNotions
                 OneSignal.Current.SendTag("tokenUsuario", token);
                 OneSignal.Current.SetExternalUserId(Config.ambiente + "_" + Config.modulo + "_" + Config.municipio + "_" + token);
             }
-            if (e.Url.Contains("browser"))
+            if (e.Url.Contains("target=browser"))
             {
                 try
                 {
-                    Launcher.OpenAsync(new Uri(e.Url));
+                    await Launcher.OpenAsync(new Uri(e.Url));
+                    e.Cancel = true;
                 }
                 catch (Exception ex)
                 {
                     Navegador.Source = "https://www.google.com/search?q=" + ex.Message;
                 }
-                //Navegador.GoBack();
             }
         }
     }

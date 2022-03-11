@@ -2,8 +2,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.comprasesperanza"
-	.size	.L.env.str.1, 21
+	.asciz	"com.comprasdesarrollo"
+	.size	.L.env.str.1, 22
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -72,7 +72,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"1fddd6b0-2124-4f93-a1a9-59c5000e1cdd"
+	.asciz	"78cc4535-5a8c-4391-954d-038d5aef172b"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

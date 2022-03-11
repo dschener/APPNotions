@@ -5,7 +5,7 @@
     Changes to this file may cause incorrect behavior and will be lost if
     the contents are regenerated.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.comprasesperanza" android:installLocation="auto" android:versionCode="6" android:versionName="1.6">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.comprasdesarrollo" android:installLocation="auto" android:versionCode="6" android:versionName="1.6">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,18 +16,8 @@
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.SET_ORIENTATION" />
-  <uses-permission android:name="com.comprasesperanza.permission.C2D_MESSAGE" />
-  <permission android:name="com.comprasesperanza.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-  <queries>
-    <intent>
-      <action android:name="android.intent.action.VIEW" />
-      <data android:scheme="http" />
-    </intent>
-    <intent>
-      <action android:name="android.intent.action.VIEW" />
-      <data android:scheme="https" />
-    </intent>
-  </queries>
+  <uses-permission android:name="com.comprasdesarrollo.permission.C2D_MESSAGE" />
+  <permission android:name="com.comprasdesarrollo.permission.C2D_MESSAGE" android:protectionLevel="signature" />
   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
   <!-- Required, makes sure notifications are delivered on time. -->
   <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -67,21 +57,21 @@
   <!-- EvMe -->
   <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
   <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
-  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/icon" android:label="Compras Esperanza" android:theme="@style/MainTheme">
+  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/icon" android:label="Compras Desarrollo" android:theme="@style/MainTheme">
     <receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-        <category android:name="com.comprasesperanza" />
+        <category android:name="com.comprasdesarrollo" />
       </intent-filter>
     </receiver>
     <receiver android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" android:enabled="true" android:exported="false" />
-    <activity android:name="crc643534cab690e53883.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:theme="@style/MainTheme">
+    <activity android:name="crc643534cab690e53883.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:screenOrientation="portrait" android:theme="@style/MainTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.comprasesperanza.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
+    <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.comprasdesarrollo.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
     <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
     <service android:name="com.onesignal.HmsMessageServiceOneSignal" android:exported="false">
       <intent-filter>
@@ -112,7 +102,7 @@
         <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
       </intent-filter>
     </receiver>
-    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="com.comprasesperanza.firebaseinitprovider" android:exported="false" android:initOrder="100" />
+    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="com.comprasdesarrollo.firebaseinitprovider" android:exported="false" android:initOrder="100" />
     <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
       <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar" />
     </service>
