@@ -9,26 +9,26 @@
     ".NETStandard,Version=v2.0/": {
       "APPNotions/1.0.0": {
         "dependencies": {
-          "Com.OneSignal": "3.10.6",
+          "Com.OneSignal": "4.0.0-beta4",
           "NETStandard.Library": "2.0.3",
-          "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337"
         },
         "runtime": {
           "APPNotions.dll": {}
         }
       },
-      "Com.OneSignal/3.10.6": {
+      "Com.OneSignal/4.0.0-beta4": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
-          "lib/netstandard1.0/Com.OneSignal.Abstractions.dll": {
-            "assemblyVersion": "3.10.6.0",
+          "lib/netstandard2.0/Com.OneSignal.Core.dll": {
+            "assemblyVersion": "0.0.0.0",
             "fileVersion": "1.0.0.0"
           },
-          "lib/netstandard1.0/Com.OneSignal.dll": {
-            "assemblyVersion": "3.10.6.0",
+          "lib/netstandard2.0/Com.OneSignal.dll": {
+            "assemblyVersion": "0.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -47,7 +47,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -58,19 +58,19 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2337": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.671"
+            "fileVersion": "5.0.0.884"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.671"
+            "fileVersion": "5.0.0.884"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.671"
+            "fileVersion": "5.0.0.884"
           }
         }
       }
@@ -82,12 +82,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Com.OneSignal/3.10.6": {
+    "Com.OneSignal/4.0.0-beta4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Liv7lhMtBt1vDFSO68WJoSNYFaDB/V85pBzyVbMs1JAZG3wHwd5JVDc6fqjguT/c1cvo4mOWJSTWb2fc8GRblA==",
-      "path": "com.onesignal/3.10.6",
-      "hashPath": "com.onesignal.3.10.6.nupkg.sha512"
+      "sha512": "sha512-npEepg4V1z+ebxn5jthzIso4utoLp15GRT+m4qUCaMRewyunyvZw3PesN6/i812QVwKT0tNiorMrKZ+bXyYX4g==",
+      "path": "com.onesignal/4.0.0-beta4",
+      "hashPath": "com.onesignal.4.0.0-beta4.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -110,19 +110,19 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.6.1": {
+    "Xamarin.Essentials/1.7.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
-      "path": "xamarin.essentials/1.6.1",
-      "hashPath": "xamarin.essentials.1.6.1.nupkg.sha512"
+      "sha512": "sha512-u7pUgvHJKTYo5ATiwRZvYviq2O0AQXIqxdna+sMxqidfWpbD7FBgFOLNAZzWKSll/AQBPeDrqLAWZNLq+ztpmQ==",
+      "path": "xamarin.essentials/1.7.1",
+      "hashPath": "xamarin.essentials.1.7.1.nupkg.sha512"
     },
-    "Xamarin.Forms/5.0.0.2012": {
+    "Xamarin.Forms/5.0.0.2337": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
-      "path": "xamarin.forms/5.0.0.2012",
-      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
+      "sha512": "sha512-2AYl2V1YHjEDEmA5d+aP382ielCKr8d/jo3zCgPSvLE/4Pw/em7pHBGmN3yZ/WzxIMV16f7wBfoFCHesMud0AA==",
+      "path": "xamarin.forms/5.0.0.2337",
+      "hashPath": "xamarin.forms.5.0.0.2337.nupkg.sha512"
     }
   }
 }

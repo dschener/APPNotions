@@ -1,12 +1,12 @@
-﻿#define MUN_DESARROLLO
-#define AMB_DESARROLLO
+﻿#define MUN_ESPERANZA
+#define AMB_PRODUCCION
 #define MOD_COMPRAS
 
 namespace APPNotions
 {
     static class Config
     {
-        private static string appVersion = "6";
+        private static string appVersion = "13";
 
 
         #region urlLogin
@@ -18,6 +18,9 @@ namespace APPNotions
 #endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_MOVPARK
         public static string urlLogin = "https://esperanza.movilparking.com/vecino/app/login?appVersion=" + appVersion;
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MOVPARK
+        public static string urlLogin = "https://desarrollo.movilparking.com/vecino/app/login?appVersion=" + appVersion;
 #endif
         #endregion
         #region tags para OneSignal

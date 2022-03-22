@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.comprasdesarrollo"
-	.size	.L.env.str.1, 22
+	.asciz	"com.movilparkingdesarrollo"
+	.size	.L.env.str.1, 27
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"07f72fd2-a8eb-418d-8fa8-0638064002a9"
+	.asciz	"b6663bfc-9a78-4f52-b564-256284308383"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

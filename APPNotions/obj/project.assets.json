@@ -2,18 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Com.OneSignal/3.10.6": {
+      "Com.OneSignal/4.0.0-beta4": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1"
+          "NETStandard.Library": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.0/Com.OneSignal.Abstractions.dll": {},
-          "lib/netstandard1.0/Com.OneSignal.dll": {}
+          "lib/netstandard2.0/Com.OneSignal.Core.dll": {},
+          "lib/netstandard2.0/Com.OneSignal.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Com.OneSignal.Abstractions.dll": {},
-          "lib/netstandard1.0/Com.OneSignal.dll": {}
+          "lib/netstandard2.0/Com.OneSignal.Core.dll": {},
+          "lib/netstandard2.0/Com.OneSignal.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -49,7 +49,7 @@
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -61,7 +61,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2337": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -81,31 +81,56 @@
     }
   },
   "libraries": {
-    "Com.OneSignal/3.10.6": {
-      "sha512": "Liv7lhMtBt1vDFSO68WJoSNYFaDB/V85pBzyVbMs1JAZG3wHwd5JVDc6fqjguT/c1cvo4mOWJSTWb2fc8GRblA==",
+    "Com.OneSignal/4.0.0-beta4": {
+      "sha512": "npEepg4V1z+ebxn5jthzIso4utoLp15GRT+m4qUCaMRewyunyvZw3PesN6/i812QVwKT0tNiorMrKZ+bXyYX4g==",
       "type": "package",
-      "path": "com.onesignal/3.10.6",
+      "path": "com.onesignal/4.0.0-beta4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "com.onesignal.3.10.6.nupkg.sha512",
+        "build/Xamarin.iOS10/Com.OneSignal.targets",
+        "com.onesignal.4.0.0-beta4.nupkg.sha512",
         "com.onesignal.nuspec",
-        "lib/MonoAndroid10/Com.OneSignal.Abstractions.dll",
-        "lib/MonoAndroid10/Com.OneSignal.Abstractions.pdb",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/Info.plist",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_armv7_armv7s/OneSignal.framework/Headers/OneSignal.h",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_armv7_armv7s/OneSignal.framework/Info.plist",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_armv7_armv7s/OneSignal.framework/Modules/module.modulemap",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_armv7_armv7s/OneSignal.framework/OneSignal",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_i386_x86_64-simulator/OneSignal.framework/Headers/OneSignal.h",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_i386_x86_64-simulator/OneSignal.framework/Info.plist",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_i386_x86_64-simulator/OneSignal.framework/Modules/module.modulemap",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_i386_x86_64-simulator/OneSignal.framework/OneSignal",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_i386_x86_64-simulator/OneSignal.framework/_CodeSignature/CodeResources",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Headers/OneSignal.h",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Modules/module.modulemap",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/OneSignal",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Resources/Info.plist",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/A/Headers/OneSignal.h",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/A/Modules/module.modulemap",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/A/OneSignal",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/A/Resources/Info.plist",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/Current/Headers/OneSignal.h",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/Current/Modules/module.modulemap",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/Current/OneSignal",
+        "content/Com.OneSignal.iOS.resources/OneSignal.xcframework/ios-arm64_x86_64-maccatalyst/OneSignal.framework/Versions/Current/Resources/Info.plist",
+        "content/Com.OneSignal.iOS.resources/manifest",
+        "lib/MonoAndroid10/Com.OneSignal.Core.dll",
+        "lib/MonoAndroid10/Com.OneSignal.Core.pdb",
         "lib/MonoAndroid10/Com.OneSignal.dll",
         "lib/MonoAndroid10/Com.OneSignal.pdb",
         "lib/MonoAndroid10/OneSignal.Android.Binding.dll",
         "lib/MonoAndroid10/OneSignal.Android.Binding.pdb",
-        "lib/Xamarin.iOS10/Com.OneSignal.Abstractions.dll",
-        "lib/Xamarin.iOS10/Com.OneSignal.Abstractions.pdb",
+        "lib/MonoAndroid10/OneSignal.Android.Binding.xml",
+        "lib/Xamarin.iOS10/Com.OneSignal.Core.dll",
+        "lib/Xamarin.iOS10/Com.OneSignal.Core.pdb",
         "lib/Xamarin.iOS10/Com.OneSignal.dll",
         "lib/Xamarin.iOS10/Com.OneSignal.pdb",
         "lib/Xamarin.iOS10/OneSignal.iOS.Binding.dll",
         "lib/Xamarin.iOS10/OneSignal.iOS.Binding.pdb",
-        "lib/netstandard1.0/Com.OneSignal.Abstractions.dll",
-        "lib/netstandard1.0/Com.OneSignal.Abstractions.pdb",
-        "lib/netstandard1.0/Com.OneSignal.dll",
-        "lib/netstandard1.0/Com.OneSignal.pdb"
+        "lib/netstandard2.0/Com.OneSignal.Core.dll",
+        "lib/netstandard2.0/Com.OneSignal.Core.pdb",
+        "lib/netstandard2.0/Com.OneSignal.dll",
+        "lib/netstandard2.0/Com.OneSignal.pdb"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -299,10 +324,10 @@
         "version.txt"
       ]
     },
-    "Xamarin.Essentials/1.6.1": {
-      "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
+    "Xamarin.Essentials/1.7.1": {
+      "sha512": "u7pUgvHJKTYo5ATiwRZvYviq2O0AQXIqxdna+sMxqidfWpbD7FBgFOLNAZzWKSll/AQBPeDrqLAWZNLq+ztpmQ==",
       "type": "package",
-      "path": "xamarin.essentials/1.6.1",
+      "path": "xamarin.essentials/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -311,15 +336,6 @@
         "lib/monoandroid10.0/Xamarin.Essentials.dll",
         "lib/monoandroid10.0/Xamarin.Essentials.pdb",
         "lib/monoandroid10.0/Xamarin.Essentials.xml",
-        "lib/monoandroid80/Xamarin.Essentials.dll",
-        "lib/monoandroid80/Xamarin.Essentials.pdb",
-        "lib/monoandroid80/Xamarin.Essentials.xml",
-        "lib/monoandroid81/Xamarin.Essentials.dll",
-        "lib/monoandroid81/Xamarin.Essentials.pdb",
-        "lib/monoandroid81/Xamarin.Essentials.xml",
-        "lib/monoandroid90/Xamarin.Essentials.dll",
-        "lib/monoandroid90/Xamarin.Essentials.pdb",
-        "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
         "lib/netstandard1.0/Xamarin.Essentials.pdb",
         "lib/netstandard1.0/Xamarin.Essentials.xml",
@@ -346,14 +362,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.6.1.nupkg.sha512",
+        "xamarin.essentials.1.7.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2012": {
-      "sha512": "Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+    "Xamarin.Forms/5.0.0.2337": {
+      "sha512": "2AYl2V1YHjEDEmA5d+aP382ielCKr8d/jo3zCgPSvLE/4Pw/em7pHBGmN3yZ/WzxIMV16f7wBfoFCHesMud0AA==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2012",
+      "path": "xamarin.forms/5.0.0.2337",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -562,17 +578,17 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2012.nupkg.sha512",
+        "xamarin.forms.5.0.0.2337.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Com.OneSignal >= 3.10.6",
+      "Com.OneSignal >= 4.0.0-beta4",
       "NETStandard.Library >= 2.0.3",
-      "Xamarin.Essentials >= 1.6.1",
-      "Xamarin.Forms >= 5.0.0.2012"
+      "Xamarin.Essentials >= 1.7.1",
+      "Xamarin.Forms >= 5.0.0.2337"
     ]
   },
   "packageFolders": {
@@ -621,7 +637,7 @@
         "dependencies": {
           "Com.OneSignal": {
             "target": "Package",
-            "version": "[3.10.6, )"
+            "version": "[4.0.0-beta4, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -631,11 +647,11 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.6.1, )"
+            "version": "[1.7.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2012, )"
+            "version": "[5.0.0.2337, )"
           }
         },
         "imports": [

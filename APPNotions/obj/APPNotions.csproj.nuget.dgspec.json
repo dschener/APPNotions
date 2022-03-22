@@ -46,7 +46,7 @@
           "dependencies": {
             "Com.OneSignal": {
               "target": "Package",
-              "version": "[3.10.6, )"
+              "version": "[4.0.0-beta4, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -56,11 +56,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2337, )"
             }
           },
           "imports": [
