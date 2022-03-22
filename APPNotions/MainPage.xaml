@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APPNotions.MainPage">
 
-    <WebView x:Name="Navegador" Navigating="Navegador_Navigating" ></WebView>
+    <WebView x:Name="Navegador" Navigating="Navegador_Navigating" HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand" ></WebView>
 
 </ContentPage>
