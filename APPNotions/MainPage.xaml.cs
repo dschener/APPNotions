@@ -40,7 +40,6 @@ namespace APPNotions
             {
                 string token = e.Url.Split(new string[] { "token=" }, StringSplitOptions.None)[1];
                 OneSignal.Default.SendTag("tokenUsuario", token);
-                //OneSignal.Default.SetExternalUserId(Config.ambiente + "_" + Config.modulo + "_" + Config.municipio + "_" + token);
             }
             if (e.Url.Contains("target=browser") || e.Url.StartsWith("tel:"))
             {
@@ -49,9 +48,9 @@ namespace APPNotions
                     await Launcher.OpenAsync(new Uri(e.Url));
                     e.Cancel = true;
                 }
-                catch// (Exception ex)
+                catch
                 {
-                    //Navegador.Source = "https://www.google.com/search?q=" + ex.Message;
+                    
                 }
             }
         }
