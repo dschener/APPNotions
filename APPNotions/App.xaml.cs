@@ -19,7 +19,6 @@ namespace APPNotions
             //OneSignal v4
             OneSignal.Default.Initialize("f8a0c2c3-1256-4bf3-91b8-bec7e20f058f");
             OneSignal.Default.NotificationWasOpened += _notificationOpened;
-
             OneSignal.Default.NotificationWillShow += _notificationReceived;
 
             // OneSignal v3
@@ -47,6 +46,7 @@ namespace APPNotions
             //string payload = result.notification.rawPayload;
             //Dictionary<string, object> additionalData = result.notification.rawPayload;
             string launchURL = Config.urlLogin;// null;
+            
             //if (additionalData != null)
             //{
             //    if (additionalData.ContainsKey("launchURL"))

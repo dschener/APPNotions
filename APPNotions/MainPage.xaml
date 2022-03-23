@@ -4,6 +4,6 @@
              x:Class="APPNotions.MainPage">
 
     <WebView x:Name="Navegador" Navigating="Navegador_Navigating" HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand" ></WebView>
+    VerticalOptions="FillAndExpand"></WebView>
 
 </ContentPage>
