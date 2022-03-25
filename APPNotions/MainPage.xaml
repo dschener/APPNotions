@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APPNotions.MainPage">
 
-    <WebView x:Name="Navegador" Navigating="Navegador_Navigating" HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand" Source="https://esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login"></WebView>
+    <WebView Source="http://www.google.com"></WebView>
 
 </ContentPage>
