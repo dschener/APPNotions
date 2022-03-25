@@ -14,7 +14,7 @@ namespace APPNotions
         public static string urlLogin = "https://desarrollo-esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login?appVersion=" + appVersion;
 #endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRAS
-        public static string urlLogin = "https://donweb.com/es-ar/cual-es-mi-ip";//"https://esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login?appVersion=" + appVersion;
+        public static string urlLogin = "https://esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login?appVersion=" + appVersion;
 #endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_MOVPARK
         public static string urlLogin = "https://esperanza.movilparking.com/vecino/app/login?appVersion=" + appVersion;
