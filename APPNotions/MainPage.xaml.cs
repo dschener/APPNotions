@@ -46,7 +46,14 @@ namespace APPNotions
                 try
                 {
                     await Launcher.OpenAsync(new Uri(e.Url));
-                    e.Cancel = true;
+                    if (Device.RuntimePlatform == Device.iOS)
+                    {
+                        Navegador.GoBack();
+                    }
+                    else if (Device.RuntimePlatform == Device.Android)
+                    {
+                        e.Cancel = true;
+                    }                    
                 }
                 catch
                 {

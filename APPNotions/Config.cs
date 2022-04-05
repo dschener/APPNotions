@@ -1,6 +1,6 @@
 ﻿#define MUN_ESPERANZA
 #define AMB_PRODUCCION
-#define MOD_COMPRAS
+#define MOD_MOVPARK
 
 namespace APPNotions
 {
@@ -23,6 +23,7 @@ namespace APPNotions
         public static string urlLogin = "https://desarrollo.movilparking.com/vecino/app/login?appVersion=" + appVersion;
 #endif
         #endregion
+
         #region tags para OneSignal
 #if MUN_ESPERANZA
         public static string municipio = "Esperanza";
@@ -45,8 +46,14 @@ namespace APPNotions
         public static string modulo = "MovPark";
 #endif
         #endregion
+
         #region oneSignalKey
-        public static string oneSignalKey = "f8a0c2c3-1256-4bf3-91b8-bec7e20f058f";
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRAS
+        //public static string oneSignalKey = "9aef9f9d-396e-424b-96e3-63d57596b3d6"; //Proyecto nuevo
+#endif
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_MOVPARK
+        public static string oneSignalKey = "f8a0c2c3-1256-4bf3-91b8-bec7e20f058f";// Clave original
+#endif
         #endregion
     }
 }

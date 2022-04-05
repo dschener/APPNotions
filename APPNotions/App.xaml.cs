@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Com.OneSignal;
 using Com.OneSignal.Core;
+using System.Collections.Generic;
 
 namespace APPNotions
 {
@@ -13,23 +14,10 @@ namespace APPNotions
             InitializeComponent();
 
             MainPage = new MainPage();
-            //Remove this method to stop OneSignal Debugging  
-            //OneSignal.Default.SetLogLevel(LOG_LEVEL.VERBOSE, LOG_LEVEL.NONE);
 
-            //OneSignal v4
-            OneSignal.Default.Initialize("f8a0c2c3-1256-4bf3-91b8-bec7e20f058f");
+            OneSignal.Default.Initialize(Config.oneSignalKey);
             OneSignal.Default.NotificationWasOpened += _notificationOpened;
             OneSignal.Default.NotificationWillShow += _notificationReceived;
-
-            // OneSignal v3
-            //        OneSignal.DefOneSignal.Default.Initialize("f8a0c2c3-1256-4bf3-91b8-bec7e20f058f");ault.StartInit(Config.oneSignalKey)
-            //        .InFocusDisplaying(OSInFocusDisplayOption.Notification)
-            //        .HandleNotificationOpened(OnHandleNotificationOpened)
-            //        .Settings(new Dictionary<string, bool>() {
-            //{ IOSSettings.kOSSettingsKeyAutoPrompt, false },
-            //{ IOSSettings.kOSSettingsKeyInAppLaunchURL, false } })
-            //        .InFocusDisplaying(OSInFocusDisplayOption.Notification)
-            //        .EndInit();
 
             OneSignal.Default.SendTag("Lenguaje", "Xamarin");
             OneSignal.Default.SendTag("ambiente", Config.ambiente);
@@ -44,9 +32,10 @@ namespace APPNotions
         private void _notificationOpened(NotificationOpenedResult  result)
         {
             //string payload = result.notification.rawPayload;
-            //Dictionary<string, object> additionalData = result.notification.rawPayload;
-            string launchURL = Config.urlLogin;// null;
-            
+            //Dictionary<string, object> additionalData = new Dictionary<string, object>();
+            //additionalData.LoadFromXaml(result.notification.rawPayload);
+            string launchURL = Config.urlLogin;
+
             //if (additionalData != null)
             //{
             //    if (additionalData.ContainsKey("launchURL"))
