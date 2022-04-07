@@ -21,8 +21,6 @@ namespace APPNotions
 
             OneSignal.Default.SendTag("Lenguaje", "Xamarin");
             OneSignal.Default.SendTag("ambiente", Config.ambiente);
-            OneSignal.Default.SendTag("modulo", Config.modulo);
-            OneSignal.Default.SendTag("municipio", Config.municipio);
             OneSignal.Default.SendTag("tokenUsuario", "Null");
             // No disponible en v3
             //OneSignal.Default.RegisterForPushNotifications();
