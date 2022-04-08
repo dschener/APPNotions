@@ -21,9 +21,9 @@
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>MovilParking Concepcion</string>
+	<string>MovilParking Nogoya</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.movilparkingconcepcion</string>
+	<string>com.movilparkingnogoya</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
