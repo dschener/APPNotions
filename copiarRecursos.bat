@@ -27,3 +27,5 @@ xcopy !ruta!\mipmap-xxhdpi\*.* APPNotions.Android\Resources\mipmap-xxhdpi\ /Y
 xcopy !ruta!\mipmap-xxxhdpi\*.* APPNotions.Android\Resources\mipmap-xxxhdpi\ /Y
 xcopy !ruta!\AppIcon.appiconset\*.* APPNotions.iOS\Assets.xcassets\AppIcon.appiconset\ /Y
 xcopy !ruta!\Resources\*.* APPNotions.iOS\Resources\ /Y
+
+pause

@@ -21,9 +21,9 @@
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>MovilParking Gualeguay</string>
+	<string>MovilParking C del Uruguay</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.movilparkinggualeguay</string>
+	<string>com.movilparkingcdeluruguay</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
