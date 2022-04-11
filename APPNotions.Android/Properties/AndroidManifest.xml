@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="13" android:versionName="1.7" package="com.movilparkingesperanza" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="13" android:versionName="1.0" package="com.movilparkingcdeluruguay" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
-	<application android:label="MovilParking Esperanza" android:theme="@style/MainTheme">
+	<application android:label="MovilParking C del Uruguay" android:theme="@style/MainTheme">
 		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:exported="true"  android:permission="com.google.android.c2dm.permission.SEND">
 			<intent-filter>
 				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
