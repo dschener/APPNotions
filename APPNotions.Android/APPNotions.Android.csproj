@@ -48,10 +48,11 @@
     <AndroidSigningStorePass>123456777</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>my-key-alias</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>123456777</AndroidSigningKeyPass>
-    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <MandroidI18n />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>

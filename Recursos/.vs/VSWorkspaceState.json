@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AMB_DESARROLLO",
     "\\AMB_DESARROLLO\\MUN_DESARROLLO",
-    "\\AMB_DESARROLLO\\MUN_DESARROLLO\\MOD_COMPRAS"
+    "\\AMB_DESARROLLO\\MUN_DESARROLLO\\MOD_COMPRAS",
+    "\\AMB_PRODUCCION",
+    "\\AMB_PRODUCCION\\MUN_GUALEGUAY",
+    "\\AMB_PRODUCCION\\MUN_GUALEGUAY\\MOD_MOVPARK"
   ],
+  "SelectedNode": "\\AMB_PRODUCCION\\MUN_GUALEGUAY\\MOD_MOVPARK\\Info.plist",
   "PreviewInSolutionExplorer": false
 }

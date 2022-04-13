@@ -1,4 +1,4 @@
-﻿#define MUN_CDELURUGUAY
+﻿#define MUN_GUALEGUAY
 #define AMB_PRODUCCION
 #define MOD_MOVPARK
 
@@ -6,7 +6,7 @@ namespace APPNotions
 {
     static class Config
     {
-        private static string appVersion = "13";
+        private static string appVersion = "14";
 
         #region urlLogin
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_COMPRAS
