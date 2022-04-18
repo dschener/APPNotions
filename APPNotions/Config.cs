@@ -52,7 +52,7 @@ namespace APPNotions
 
         #region oneSignalKey
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRAS
-        //public static string oneSignalKey = "9aef9f9d-396e-424b-96e3-63d57596b3d6";
+        public static string oneSignalKey = "9aef9f9d-396e-424b-96e3-63d57596b3d6";
 #endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_MOVPARK
         public static string oneSignalKey = "f8a0c2c3-1256-4bf3-91b8-bec7e20f058f";
