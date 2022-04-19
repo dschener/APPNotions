@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="14" android:versionName="1.7" package="com.comprasesperanza" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="14" android:versionName="1.0" package="com.movilparkinggualeguay" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
-	<application android:label="Compras Esperanza" android:exported="true" android:theme="@style/MainTheme">
-		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+	<application android:label="MovilParking Gualeguay" android:theme="@style/MainTheme">
+		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:exported="true"  android:permission="com.google.android.c2dm.permission.SEND">
 			<intent-filter>
 				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
 				<category android:name="${applicationId}" />
