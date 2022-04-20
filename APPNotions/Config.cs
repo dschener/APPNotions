@@ -1,4 +1,4 @@
-﻿#define MUN_CDELURUGUAY
+﻿#define MUN_NOGOYA
 #define AMB_PRODUCCION
 #define MOD_MOVPARK
 
