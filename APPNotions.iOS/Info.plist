@@ -21,9 +21,9 @@
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>MovilParking Victoria</string>
+	<string>MovilParking La Paz</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.movilparkingvictoria</string>
+	<string>com.movilparkinglapaz</string>
 	<key>CFBundleVersion</key>
 	<string>3.0</string>
 	<key>UILaunchStoryboardName</key>
