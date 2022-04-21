@@ -9,6 +9,10 @@ namespace APPNotions
         private static string appVersion = "14";
 
         #region urlLogin
+
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_VECINODIGITAL
+        public static string urlLogin = "http://desarrollo-esperanza.gobdigital.com.ar/web/vecino/app/default?appVersion=" + appVersion;
+#endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_COMPRAS
         public static string urlLogin = "https://desarrollo-esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login?appVersion=" + appVersion;
 #endif
@@ -51,6 +55,9 @@ namespace APPNotions
         #endregion
 
         #region oneSignalKey
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_VECINODIGITAL
+        public static string oneSignalKey = "b1d5f2d5-29b0-4409-abe2-d0a070f2d1ad";
+#endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRAS
         public static string oneSignalKey = "9aef9f9d-396e-424b-96e3-63d57596b3d6";
 #endif
@@ -84,14 +91,23 @@ namespace APPNotions
 #if MUN_LAPAZ && AMB_PRODUCCION && MOD_MOVPARK
         public static string oneSignalKey = "35bb0d49-af4a-415c-845b-a2c494270d22";
 #endif
-        
+
 #if AMB_PRODUCCION
         public static string ambiente = "Produccion";
 #endif
 #if AMB_DESARROLLO
         public static string ambiente = "Desarrollo";
 #endif
-        #endregion
+#if MOD_MOVPARK
+        public static string modulo = "Movil Parking";
+#endif
+#if MOD_COMPRAS
+        public static string modulo = "COMPRAS";
+#endif
+#if MOD_VECINODIGITAL
+        public static string modulo = "Vecino Digital";
+#endif
+  #endregion
 
     }
 }
