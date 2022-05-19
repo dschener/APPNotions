@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using OneSignalSDK.Xamarin;
+using OneSignalSDK.Xamarin.Core;
 using Foundation;
 using UIKit;
 
@@ -24,6 +26,9 @@ namespace APPNotions.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            OneSignal.Default.Initialize(Config.oneSignalKey);
+
+            OneSignal.Default.PromptForPushNotificationsWithUserResponse();
 
             return base.FinishedLaunching(app, options);
         }

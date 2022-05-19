@@ -1,4 +1,4 @@
-﻿#define MUN_LAPAZ
+﻿#define MUN_GUALEGUAY
 #define AMB_PRODUCCION
 #define MOD_MOVPARK
 
@@ -6,12 +6,19 @@ namespace APPNotions
 {
     static class Config
     {
-        private static string appVersion = "14";
+        private static string appVersion = "15";
+        // Version 15 (Version Name 1.3): Corregido OneSignal (app cerraba en notificationreceived), y mejoras en notificaciones y lectura posición GPS entre otras
+        // Version 13 (Version Name 1.2): Soporte android 12
+        // Version 11 (Version Name 1.1): Primera Version Xamarin
+        // Version  8 (Version Name 1.0): Primera Version React Native
 
         #region urlLogin
 
+#if MUN_CONCEPCION && AMB_PRODUCCION && MOD_GESTIONCOCHERAS
+        public static string urlLogin = "http://desarrollo-esperanza.gobdigital.com.ar/web/vecino/app_establecimientos/login?appVersion=" + appVersion;
+#endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_VECINODIGITAL
-        public static string urlLogin = "http://desarrollo-esperanza.gobdigital.com.ar/web/vecino/app/default?appVersion=" + appVersion;
+        public static string urlLogin = "http://desarrollo-esperanza.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
 #endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_COMPRAS
         public static string urlLogin = "https://desarrollo-esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login?appVersion=" + appVersion;
@@ -55,6 +62,9 @@ namespace APPNotions
         #endregion
 
         #region oneSignalKey
+#if MUN_CONCEPCION && AMB_PRODUCCION && MOD_GESTIONCOCHERAS
+        public static string oneSignalKey = "ca11db27-be18-4bbe-ad35-9b418a425aca";
+#endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_VECINODIGITAL
         public static string oneSignalKey = "b1d5f2d5-29b0-4409-abe2-d0a070f2d1ad";
 #endif
@@ -100,14 +110,21 @@ namespace APPNotions
 #endif
 #if MOD_MOVPARK
         public static string modulo = "Movil Parking";
+        public static string dominio = "movilparking.com";
 #endif
 #if MOD_COMPRAS
         public static string modulo = "COMPRAS";
+        public static string dominio = "gobdigital.com";
 #endif
 #if MOD_VECINODIGITAL
         public static string modulo = "Vecino Digital";
+        public static string dominio = "gobdigital.com";
 #endif
-  #endregion
+#if MOD_GESTIONCOCHERAS
+        public static string modulo = "Gestión Cocheras";
+        public static string dominio = "gobdigital.com";
+#endif
+        #endregion
 
     }
 }

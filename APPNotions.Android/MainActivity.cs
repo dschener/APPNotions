@@ -5,8 +5,9 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.OS;
-using Com.OneSignal;
-using Com.OneSignal.Core;
+using OneSignalSDK.Xamarin;
+using OneSignalSDK.Xamarin.Core;
+
 
 namespace APPNotions.Droid
 {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "968525373036",
+    "project_id": "movilparking-merlo",
+    "storage_bucket": "movilparking-merlo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968525373036:android:700b61e7d14429c209c249",
+        "android_client_info": {
+          "package_name": "com.movilparkingmerlo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968525373036-37l8p474vqkppmcu23jp4ltmkij8traf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPAwcMYNG8uT72MzI6RU1-3ZuYiBXz1qQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968525373036-37l8p474vqkppmcu23jp4ltmkij8traf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,9 +1,9 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Com.OneSignal;
-using Com.OneSignal.Core;
+using OneSignalSDK.Xamarin;
+using OneSignalSDK.Xamarin.Core;
 using System.Collections.Generic;
+using System.Net.Http;
 
 namespace APPNotions
 {
@@ -13,36 +13,55 @@ namespace APPNotions
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
 
             OneSignal.Default.Initialize(Config.oneSignalKey);
-            OneSignal.Default.NotificationWasOpened += _notificationOpened;
+            OneSignal.Default.NotificationOpened += _notificationOpened;
             OneSignal.Default.NotificationWillShow += _notificationReceived;
 
             OneSignal.Default.SendTag("Lenguaje", "Xamarin");
             OneSignal.Default.SendTag("ambiente", Config.ambiente);
             OneSignal.Default.SendTag("modulo", Config.modulo);
             OneSignal.Default.SendTag("tokenUsuario", "Null");
-            // No disponible en v3
-            //OneSignal.Default.RegisterForPushNotifications();
+
+            OneSignal.Default.PromptForPushNotificationsWithUserResponse();
         }
 
 
-        private void _notificationOpened(NotificationOpenedResult  result)
+        private void _notificationOpened(NotificationOpenedResult result)
         {
-            //string payload = result.notification.rawPayload;
-            //Dictionary<string, object> additionalData = new Dictionary<string, object>();
-            //additionalData.LoadFromXaml(result.notification.rawPayload);
             string launchURL = Config.urlLogin;
-
-            //if (additionalData != null)
-            //{
-            //    if (additionalData.ContainsKey("launchURL"))
-            //    {
-            //        launchURL = additionalData["launchURL"].ToString();
-            //    }
-            //}
-            MainPage = new MainPage(launchURL);
+            Dictionary<string, object> additionalData = result.notification.additionalData;
+            string accionId = "";
+            string accionUrl = "";
+            if (result.action.actionID != null)
+            {
+                accionId = result.action.actionID;
+            }
+            if (additionalData != null)
+            {
+                if (accionId != "")
+                {
+                    if (additionalData.ContainsKey(accionId))
+                    {
+                        launchURL = additionalData[accionId].ToString();
+                        accionUrl = launchURL;
+                    }
+                }
+                if (additionalData.ContainsKey("launchURL") && accionUrl == "")
+                {
+                    launchURL = additionalData["launchURL"].ToString();
+                }
+            }
+            if (accionUrl.Contains("showAPP=false"))
+            {
+                HttpClient cliente = new HttpClient();
+                cliente.GetAsync(accionUrl);
+            }
+            else
+            {
+                MainPage = new MainPage(launchURL);
+            }
         }
 
         private Notification _notificationReceived(Notification notification)
@@ -51,7 +70,7 @@ namespace APPNotions
             return notification; // show the notification
         }
 
-       
+
         protected override void OnResume()
         {
             base.OnResume();

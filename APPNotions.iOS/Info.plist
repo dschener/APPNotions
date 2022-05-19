@@ -21,9 +21,9 @@
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>MovilParking La Paz</string>
+	<string>MovilParking Gualeguay</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.movilparkinglapaz</string>
+	<string>com.movilparkinggualeguay</string>
 	<key>CFBundleVersion</key>
 	<string>3.0</string>
 	<key>UILaunchStoryboardName</key>

@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="APPNotions.MainPage">
+             xmlns:local="clr-namespace:APPNotions"
+             NavigationPage.HasNavigationBar="False" x:Class="APPNotions.MainPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="StartAndExpand" BackgroundColor="#A0CECB">
+            <Button Text="Volver" TextTransform="None" ImageSource="{local:ImgResExt APPNotions.Imagenes.back.png}" Clicked="OnBack" TextColor="Black" BackgroundColor="Transparent"></Button>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <WebView x:Name="Navegador" Navigating="Navegador_Navigating" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ></WebView>
+        <Grid x:Name="EsperandoGPS" IsVisible="false">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-    <WebView x:Name="Navegador" Navigating="Navegador_Navigating" HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand"></WebView>
-
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                    <Label Text="Buscando posición GPS" FontSize="Title"/>
+                    <Label Text="Aguarde unos segundos, y será redirigido automáticamente" FontSize="16" Padding="0,0,0,0"/>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </StackLayout>
 </ContentPage>
