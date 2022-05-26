@@ -11,11 +11,16 @@ using OneSignalSDK.Xamarin.Core;
 using System.Net.Http;
 using System.Net;
 using System.IO;
+using Xamarin.Forms.Xaml;
+using Plugin.Messaging;
 
 namespace APPNotions
 {
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        private DeviceFeaturesHelper _deviceFeaturesHelper;
         public MainPage(string url = null)
         {
             InitializeComponent();
@@ -28,6 +33,10 @@ namespace APPNotions
             {
                 Navegador.Source = url;
             }
+            //Navegador.RegisterAction(ExecuteActionFromJavascript);
+
+            _deviceFeaturesHelper = new DeviceFeaturesHelper();
+
         }
         void OnBack(object sender, EventArgs args)
         {
@@ -58,6 +67,7 @@ namespace APPNotions
                 bool isAsyncTask = UrlNavegacion.Contains("asyncTask=");
                 bool isWebDominio = UrlNavegacion.Contains(Config.dominio);
                 bool isCoordenadas = UrlNavegacion.Contains("Coordenadas=Coordenadas");
+                bool isFoto = UrlNavegacion.Contains("action=PHOTO");
 
                 NavigationPage.SetHasNavigationBar(this, !isWebDominio || isTargetBack);
                 #region Push OneSignal
@@ -109,7 +119,7 @@ namespace APPNotions
                         //}
                         await RedireccionConCoordenadasExactas(UrlNavegacion, isTargetBrowser);
                     }
-                    if ((isTargetBrowser && !isCoordenadas) || isTel)
+                    if (isTargetBrowser && !isCoordenadas)
                     {
                         NavigationPage.SetHasNavigationBar(this, false);
                         if (Device.RuntimePlatform == Device.iOS)
@@ -123,6 +133,36 @@ namespace APPNotions
                         try
                         {
                             await Launcher.OpenAsync(new Uri(UrlNavegacion));
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                    if (isTel)
+                    {
+                        NavigationPage.SetHasNavigationBar(this, false);
+                        if (Device.RuntimePlatform == Device.iOS)
+                        {
+                            Navegador.GoBack();
+                        }
+                        else if (Device.RuntimePlatform == Device.Android)
+                        {
+                            e.Cancel = true;
+                        }
+                        try
+                        {
+                            bool permisosConcedidos = await _deviceFeaturesHelper.CheckForPhonePermission();
+                            if (permisosConcedidos)
+                            {
+                                var phoneDialer = CrossMessaging.Current.PhoneDialer;
+                                if (phoneDialer.CanMakePhoneCall)
+                                    phoneDialer.MakePhoneCall(UrlNavegacion.Replace("tel:", "+"));
+                            }
+                            else
+                            {
+                                await Launcher.OpenAsync(new Uri(UrlNavegacion));
+                            }
                         }
                         catch
                         {
@@ -152,14 +192,43 @@ namespace APPNotions
                         }
                         try
                         {
-                            await Launcher.OpenAsync(new Uri(UrlNavegacion));
+                            bool permisosConcedidos = await _deviceFeaturesHelper.CheckForPhonePermission();
+                            if (permisosConcedidos)
+                            {
+                                var phoneDialer = CrossMessaging.Current.PhoneDialer;
+                                if (phoneDialer.CanMakePhoneCall)
+                                    phoneDialer.MakePhoneCall(UrlNavegacion.Replace("tel:", "+"));
+                            }
+                            else
+                            {
+                                await Launcher.OpenAsync(new Uri(UrlNavegacion));
+                            }
                         }
                         catch
                         {
 
                         }
                     }
+                    if (isFoto)
+                    {
+                        NavigationPage.SetHasNavigationBar(this, false);
+                        if (Device.RuntimePlatform == Device.iOS)
+                        {
+                            Navegador.GoBack();
+                        }
+                        else if (Device.RuntimePlatform == Device.Android)
+                        {
+                            e.Cancel = true;
+                        }
+                        try
+                        {
+                            ExecuteActionFromJavascript("PHOTO", GetValueAndRemoveFromQueryStringByKey(ref UrlNavegacion, "destino"));
+                        }
+                        catch
+                        {
 
+                        }
+                    }
                 }
             }
             else
@@ -245,6 +314,20 @@ namespace APPNotions
                 ? String.Format("{0}?{1}", pagePathWithoutQueryString, newQueryString)
                 : pagePathWithoutQueryString;
             return valor;
+        }
+
+        private async void ExecuteActionFromJavascript(string param1, string param2)
+        {
+            if (param1 != null && param1.Equals("PHOTO"))
+            {
+                var result = await _deviceFeaturesHelper.TakePhoto(this);
+                if (result != null)
+                {
+                    //await Navegador.EvaluateJavaScriptAsync($"setresult_takephoto('{result}')");
+                    await Navegador.EvaluateJavaScriptAsync("document.getElementById('" + param2 + "').value='" + result + "';");
+                    await Navegador.EvaluateJavaScriptAsync("document.getElementById('" + param2 + "Img').src='data:image/png;base64," + result + "';");
+                }
+            }
         }
 
     }
