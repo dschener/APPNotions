@@ -20,6 +20,9 @@ namespace APPNotions
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_VECINODIGITAL
         public static string urlLogin = "http://desarrollo-esperanza.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
 #endif
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_VECINODIGITAL
+        public static string urlLogin = "http://esperanza.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
+#endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_COMPRAS
         public static string urlLogin = "https://desarrollo-esperanza.gobdigital.com.ar/web/compras-blockchain/proveedor_app/login?appVersion=" + appVersion;
 #endif
@@ -66,6 +69,9 @@ namespace APPNotions
         public static string oneSignalKey = "ca11db27-be18-4bbe-ad35-9b418a425aca";
 #endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_VECINODIGITAL
+        public static string oneSignalKey = "b1d5f2d5-29b0-4409-abe2-d0a070f2d1ad";
+#endif
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_VECINODIGITAL
         public static string oneSignalKey = "b1d5f2d5-29b0-4409-abe2-d0a070f2d1ad";
 #endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRAS

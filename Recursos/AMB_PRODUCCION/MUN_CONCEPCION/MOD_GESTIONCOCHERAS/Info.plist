@@ -43,5 +43,11 @@
     </dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We will implement an interactive map, to show the user points of interest related to the municipal management.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Calendar is required to set appointment reminders in the municipality</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We use the camera so that users can attach photos of the claims they are making.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We will implement an interactive map, to show the user points of interest related to the municipal management.</string>
 </dict>
 </plist>
