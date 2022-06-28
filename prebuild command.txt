@@ -1,0 +1,2 @@
+CD $(SolutionDir)
+CALL copiarRecursos.bat

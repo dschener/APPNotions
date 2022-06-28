@@ -4,16 +4,52 @@
 
 namespace APPNotions
 {
-    static class Config
-    {
-        private static string appVersion = "15";
+      static class Config
+      {
+            private static string appVersion = "16";
+        // Version 16 (Version Name 1.3.1): Si no tiene activo GPS o no da permisos, mando coordenadas 0,0
         // Version 15 (Version Name 1.3): Corregido OneSignal (app cerraba en notificationreceived), y mejoras en notificaciones y lectura posición GPS entre otras
         // Version 13 (Version Name 1.2): Soporte android 12
         // Version 11 (Version Name 1.1): Primera Version Xamarin
         // Version  8 (Version Name 1.0): Primera Version React Native
-
+        // Cómo decidir códigos de versión: https://ed.team/blog/como-se-deciden-las-versiones-del-software
         #region urlLogin
 
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRASFUNCIONARIOS
+        public static string urlLogin = "https://esperanza.gobdigital.com.ar/compras/login?appVersion=" + appVersion;
+#endif
+
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_FUNCIONARIOS
+        public static string urlLogin = "https://esperanza.gobdigital.com.ar/_gda/login?appVersion=" + appVersion;
+#endif
+
+#if MUN_LAPAZ && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string urlLogin = "https://lapaz.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+
+#if MUN_TRESARROYOS && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string urlLogin = "https://tresarroyos.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+
+#if MUN_CONCEPCION && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string urlLogin = "https://concepcion.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+
+#if MUN_NOGOYA && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string urlLogin = "https://nogoya.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+#if MUN_VICTORIA && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string urlLogin = "https://victoria.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+#if MUN_VILLAGUAY && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string urlLogin = "https://villaguay.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+#if MUN_GUALEGUAY && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string urlLogin = "https://gualeguay.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
+#if MUN_CDELURUGUAY && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string urlLogin = "https://cdeluruguay.gobdigital.com.ar/seguridad/login?appVersion=" + appVersion;
+#endif
 #if MUN_CONCEPCION && AMB_PRODUCCION && MOD_GESTIONCOCHERAS
         public static string urlLogin = "http://desarrollo-esperanza.gobdigital.com.ar/web/vecino/app_establecimientos/login?appVersion=" + appVersion;
 #endif
@@ -65,6 +101,36 @@ namespace APPNotions
         #endregion
 
         #region oneSignalKey
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRASFUNCIONARIOS
+        public static string oneSignalKey = "2158f7f7-7d26-4234-9ad7-f074b77844c5";
+#endif
+#if MUN_ESPERANZA && AMB_PRODUCCION && MOD_FUNCIONARIOS
+        public static string oneSignalKey = "8e80e930-5556-4ddd-8e1f-e76ad171075c";
+#endif
+#if MUN_LAPAZ && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string oneSignalKey = "036d0be0-bcd8-4915-8214-3fea1e9c1de4";
+#endif
+#if MUN_TRESARROYOS && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string oneSignalKey = "cd451176-3450-4a68-bd53-73ff587d3d34";
+#endif
+#if MUN_CONCEPCION && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string oneSignalKey = "f851a053-e70f-4318-a469-9073bfc41509";
+#endif
+#if MUN_NOGOYA && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string oneSignalKey = "f978ec06-0fff-4c9e-971c-3db62b52ebf8";
+#endif
+#if MUN_VICTORIA && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string oneSignalKey = "838cec95-033a-4771-9a50-d4e2d5159d94";
+#endif
+#if MUN_VILLAGUAY && AMB_PRODUCCION && MOD_SEGURIDAD
+        public static string oneSignalKey = "634e79c2-53f8-431b-b2f6-264934a09e26";
+#endif
+#if MUN_GUALEGUAY && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string oneSignalKey = "5b5043f8-1325-43b7-a857-68401916d55e";
+#endif
+#if MUN_CDELURUGUAY && AMB_PRODUCCION && MOD_SEGURIDAD
+            public static string oneSignalKey = "da566331-0776-4289-ad9f-df098e5e5944";
+#endif
 #if MUN_CONCEPCION && AMB_PRODUCCION && MOD_GESTIONCOCHERAS
         public static string oneSignalKey = "ca11db27-be18-4bbe-ad35-9b418a425aca";
 #endif
@@ -113,6 +179,21 @@ namespace APPNotions
 #endif
 #if AMB_DESARROLLO
         public static string ambiente = "Desarrollo";
+#endif
+        #endregion
+
+        #region Dominio y Modulo
+#if MOD_COMPRASFUNCIONARIOS
+            public static string modulo = "Compras Funcionarios";
+            public static string dominio = "gobdigital.com.ar";
+#endif
+#if MOD_FUNCIONARIOS
+        public static string modulo = "Funcionarios";
+            public static string dominio = "gobdigital.com.ar";
+#endif
+#if MOD_SEGURIDAD
+            public static string modulo = "Seguridad";
+            public static string dominio = "gobdigital.com.ar";
 #endif
 #if MOD_MOVPARK
         public static string modulo = "Movil Parking";

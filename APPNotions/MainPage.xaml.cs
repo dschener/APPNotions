@@ -258,14 +258,18 @@ namespace APPNotions
             Navegador.IsVisible = false;
             var Latitude = double.Parse("0");
             var Longitude = double.Parse("0");
-            var request = new GeolocationRequest(GeolocationAccuracy.Best);
-            var location = await Geolocation.GetLocationAsync(request);
-
-            if (location != null)
+            try
             {
-                Latitude = location.Latitude;
-                Longitude = location.Longitude;
+                var request = new GeolocationRequest(GeolocationAccuracy.Best);
+                var location = await Geolocation.GetLocationAsync(request);
+
+                if (location != null)
+                {
+                    Latitude = location.Latitude;
+                    Longitude = location.Longitude;
+                }
             }
+            catch { }
             string url = urlOriginal.Replace("Coordenadas=Coordenadas", "Latitud=" + Latitude.ToString().Replace(",", ".") + "&Longitud=" + Longitude.ToString().Replace(",", "."));
             EsperandoGPS.IsVisible = false;
             Navegador.IsVisible = true;
@@ -285,14 +289,19 @@ namespace APPNotions
             var Longitude = double.Parse("0");
             if (urlOriginal.Contains("Coordenadas=Coordenadas"))
             {
-                var request = new GeolocationRequest(GeolocationAccuracy.Best);
-                var location = await Geolocation.GetLocationAsync(request);
-
-                if (location != null)
+                try
                 {
-                    Latitude = location.Latitude;
-                    Longitude = location.Longitude;
+                    var request = new GeolocationRequest(GeolocationAccuracy.Best);
+                    var location = await Geolocation.GetLocationAsync(request);
+
+                    if (location != null)
+                    {
+                        Latitude = location.Latitude;
+                        Longitude = location.Longitude;
+                    }
                 }
+                catch { }
+
             }
             urlOriginal = urlOriginal.Replace("Coordenadas=Coordenadas", "Latitud=" + Latitude.ToString().Replace(", ", ".") + "&Longitud=" + Longitude.ToString());
             HttpClient cliente = new HttpClient();
