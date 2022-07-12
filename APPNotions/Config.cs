@@ -1,6 +1,6 @@
-﻿#define MUN_ESPERANZA
+﻿#define MUN_GUALEGUAY
 #define AMB_PRODUCCION
-#define MOD_VECINODIGITAL
+#define MOD_SEGURIDAD
 
 namespace APPNotions
 {
