@@ -5895,7 +5895,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\d.everle\\.nuget\\packages\\": {},
+    "C:\\Users\\d.schener\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
@@ -5904,7 +5904,7 @@
       "projectUniqueName": "M:\\_David\\APPNotions\\APPNotions.iOS\\APPNotions.iOS.csproj",
       "projectName": "APPNotions.iOS",
       "projectPath": "M:\\_David\\APPNotions\\APPNotions.iOS\\APPNotions.iOS.csproj",
-      "packagesPath": "C:\\Users\\d.everle\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\d.schener\\.nuget\\packages\\",
       "outputPath": "M:\\_David\\APPNotions\\APPNotions.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
@@ -5912,7 +5912,7 @@
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\d.everle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\d.schener\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

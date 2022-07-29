@@ -1,6 +1,6 @@
-﻿#define MUN_GUALEGUAY
+﻿#define MUN_CONCEPCION
 #define AMB_PRODUCCION
-#define MOD_SEGURIDAD
+#define MOD_VECINODIGITAL
 
 namespace APPNotions
 {
@@ -98,6 +98,9 @@ namespace APPNotions
 #if MUN_LAPAZ && AMB_PRODUCCION && MOD_MOVPARK
         public static string urlLogin = "https://lapaz.movilparking.com/vecino/app/login?appVersion=" + appVersion;
 #endif
+#if MUN_CONCEPCION && AMB_PRODUCCION && MOD_VECINODIGITAL
+        public static string urlLogin = "http://concepcion.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
+#endif
         #endregion
 
         #region oneSignalKey
@@ -172,6 +175,9 @@ namespace APPNotions
 #endif
 #if MUN_LAPAZ && AMB_PRODUCCION && MOD_MOVPARK
         public static string oneSignalKey = "35bb0d49-af4a-415c-845b-a2c494270d22";
+#endif
+#if MUN_CONCEPCION && AMB_PRODUCCION && MOD_VECINODIGITAL
+        public static string oneSignalKey = "f0725816-e18d-4d25-8e86-5880551e5e7e";
 #endif
 
 #if AMB_PRODUCCION
