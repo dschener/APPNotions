@@ -6,7 +6,7 @@ namespace APPNotions
 {
       static class Config
       {
-            private static string appVersion = "16";
+            private static string appVersion = "17";
         // Version 16 (Version Name 1.3.1): Si no tiene activo GPS o no da permisos, mando coordenadas 0,0
         // Version 15 (Version Name 1.3): Corregido OneSignal (app cerraba en notificationreceived), y mejoras en notificaciones y lectura posición GPS entre otras
         // Version 13 (Version Name 1.2): Soporte android 12
