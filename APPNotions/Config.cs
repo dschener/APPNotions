@@ -4,9 +4,9 @@
 
 namespace APPNotions
 {
-      static class Config
-      {
-            private static string appVersion = "17";
+    static class Config
+    {
+        private static string appVersion = "17";
         // Version 16 (Version Name 1.3.1): Si no tiene activo GPS o no da permisos, mando coordenadas 0,0
         // Version 15 (Version Name 1.3): Corregido OneSignal (app cerraba en notificationreceived), y mejoras en notificaciones y lectura posición GPS entre otras
         // Version 13 (Version Name 1.2): Soporte android 12
@@ -101,6 +101,9 @@ namespace APPNotions
 #if MUN_CONCEPCION && AMB_PRODUCCION && MOD_VECINODIGITAL
         public static string urlLogin = "http://concepcion.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
 #endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_CONTROLADOR
+        public static string urlLogin = "http://desarrollo.movilparking.com/controlador/login?appVersion=" + appVersion;
+#endif
         #endregion
 
         #region oneSignalKey
@@ -179,6 +182,9 @@ namespace APPNotions
 #if MUN_CONCEPCION && AMB_PRODUCCION && MOD_VECINODIGITAL
         public static string oneSignalKey = "f0725816-e18d-4d25-8e86-5880551e5e7e";
 #endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_CONTROLADOR
+        public static string oneSignalKey = "b3e2811a-523e-41d7-bc1c-e70d6a397cfc";
+#endif
 
 #if AMB_PRODUCCION
         public static string ambiente = "Produccion";
@@ -216,6 +222,10 @@ namespace APPNotions
 #if MOD_GESTIONCOCHERAS
         public static string modulo = "Gestión Cocheras";
         public static string dominio = "gobdigital.com";
+#endif
+#if MOD_CONTROLADOR
+            public static string modulo = "Controlador";
+            public static string dominio = "movilparking.com";
 #endif
         #endregion
 
