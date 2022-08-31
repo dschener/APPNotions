@@ -139,86 +139,86 @@
 	.section	.rodata.map_aname.23,"aMS",@progbits,1
 	.type	.L.map_aname.23, @object
 .L.map_aname.23:
-	.asciz	"APPNotions.Android"
-	.size	.L.map_aname.23, 19
+	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
+	.size	.L.map_aname.23, 41
 
 	.section	.rodata.map_aname.24,"aMS",@progbits,1
 	.type	.L.map_aname.24, @object
 .L.map_aname.24:
-	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
-	.size	.L.map_aname.24, 41
+	.asciz	"Xamarin.AndroidX.Fragment"
+	.size	.L.map_aname.24, 26
 
 	.section	.rodata.map_aname.25,"aMS",@progbits,1
 	.type	.L.map_aname.25, @object
 .L.map_aname.25:
-	.asciz	"Xamarin.AndroidX.Fragment"
-	.size	.L.map_aname.25, 26
+	.asciz	"Xamarin.Google.Android.Material"
+	.size	.L.map_aname.25, 32
 
 	.section	.rodata.map_aname.26,"aMS",@progbits,1
 	.type	.L.map_aname.26, @object
 .L.map_aname.26:
-	.asciz	"Xamarin.Google.Android.Material"
-	.size	.L.map_aname.26, 32
+	.asciz	"OneSignalSDK.Xamarin"
+	.size	.L.map_aname.26, 21
 
 	.section	.rodata.map_aname.27,"aMS",@progbits,1
 	.type	.L.map_aname.27, @object
 .L.map_aname.27:
-	.asciz	"OneSignalSDK.Xamarin"
-	.size	.L.map_aname.27, 21
+	.asciz	"Mono.Android"
+	.size	.L.map_aname.27, 13
 
 	.section	.rodata.map_aname.28,"aMS",@progbits,1
 	.type	.L.map_aname.28, @object
 .L.map_aname.28:
-	.asciz	"Mono.Android"
-	.size	.L.map_aname.28, 13
+	.asciz	"Xamarin.Google.Android.DataTransport.TransportApi"
+	.size	.L.map_aname.28, 50
 
 	.section	.rodata.map_aname.29,"aMS",@progbits,1
 	.type	.L.map_aname.29, @object
 .L.map_aname.29:
-	.asciz	"Xamarin.Google.Android.DataTransport.TransportApi"
-	.size	.L.map_aname.29, 50
+	.asciz	"Xamarin.AndroidX.Loader"
+	.size	.L.map_aname.29, 24
 
 	.section	.rodata.map_aname.30,"aMS",@progbits,1
 	.type	.L.map_aname.30, @object
 .L.map_aname.30:
-	.asciz	"Xamarin.AndroidX.Loader"
-	.size	.L.map_aname.30, 24
+	.asciz	"Xamarin.AndroidX.AppCompat"
+	.size	.L.map_aname.30, 27
 
 	.section	.rodata.map_aname.31,"aMS",@progbits,1
 	.type	.L.map_aname.31, @object
 .L.map_aname.31:
-	.asciz	"Xamarin.AndroidX.AppCompat"
-	.size	.L.map_aname.31, 27
+	.asciz	"Xamarin.AndroidX.Lifecycle.ViewModel"
+	.size	.L.map_aname.31, 37
 
 	.section	.rodata.map_aname.32,"aMS",@progbits,1
 	.type	.L.map_aname.32, @object
 .L.map_aname.32:
-	.asciz	"Xamarin.AndroidX.Lifecycle.ViewModel"
-	.size	.L.map_aname.32, 37
+	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
+	.size	.L.map_aname.32, 40
 
 	.section	.rodata.map_aname.33,"aMS",@progbits,1
 	.type	.L.map_aname.33, @object
 .L.map_aname.33:
-	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
-	.size	.L.map_aname.33, 40
+	.asciz	"Xamarin.Forms.Platform.Android"
+	.size	.L.map_aname.33, 31
 
 	.section	.rodata.map_aname.34,"aMS",@progbits,1
 	.type	.L.map_aname.34, @object
 .L.map_aname.34:
-	.asciz	"Xamarin.Forms.Platform.Android"
-	.size	.L.map_aname.34, 31
+	.asciz	"Xamarin.Google.Dagger"
+	.size	.L.map_aname.34, 22
 
 	.section	.rodata.map_aname.35,"aMS",@progbits,1
 	.type	.L.map_aname.35, @object
 .L.map_aname.35:
-	.asciz	"Xamarin.Google.Dagger"
-	.size	.L.map_aname.35, 22
+	.asciz	"Xamarin.GooglePlayServices.Tasks"
+	.size	.L.map_aname.35, 33
 
 	.section	.rodata.map_aname.36,"aMS",@progbits,1
 	.type	.L.map_aname.36, @object
 .L.map_aname.36:
-	.asciz	"Xamarin.GooglePlayServices.Tasks"
-	.size	.L.map_aname.36, 33
+	.asciz	"APPNotions.Android"
+	.size	.L.map_aname.36, 19
 
 	.section	.rodata.map_aname.37,"aMS",@progbits,1
 	.type	.L.map_aname.37, @object

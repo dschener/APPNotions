@@ -1,6 +1,6 @@
-﻿#define MUN_CONCEPCION
-#define AMB_PRODUCCION
-#define MOD_VECINODIGITAL
+﻿#define MUN_DESARROLLO
+#define AMB_DESARROLLO
+#define MOD_MULTAS
 
 namespace APPNotions
 {
@@ -104,6 +104,12 @@ namespace APPNotions
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_CONTROLADOR
         public static string urlLogin = "http://desarrollo.movilparking.com/controlador/login?appVersion=" + appVersion;
 #endif
+#if MUN_NOGOYA && AMB_PRODUCCION && MOD_VECINODIGITAL
+        public static string urlLogin = "https://nogoya.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MULTAS
+        public static string urlLogin = "http://desarrollo.gobdigital.com.ar/juzgadofaltas/app-multas/login?appVersion=" + appVersion;
+#endif
         #endregion
 
         #region oneSignalKey
@@ -185,13 +191,19 @@ namespace APPNotions
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_CONTROLADOR
         public static string oneSignalKey = "b3e2811a-523e-41d7-bc1c-e70d6a397cfc";
 #endif
-
+#if MUN_NOGOYA && AMB_PRODUCCION && MOD_VECINODIGITAL
+        public static string oneSignalKey = "3b4d495c-d0d0-4464-b28b-3084a6e6e28b";
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MULTAS
+        public static string oneSignalKey = "";
+#endif
 #if AMB_PRODUCCION
         public static string ambiente = "Produccion";
 #endif
 #if AMB_DESARROLLO
         public static string ambiente = "Desarrollo";
 #endif
+
         #endregion
 
         #region Dominio y Modulo
@@ -226,6 +238,10 @@ namespace APPNotions
 #if MOD_CONTROLADOR
             public static string modulo = "Controlador";
             public static string dominio = "movilparking.com";
+#endif
+#if MOD_MULTAS
+            public static string modulo = "Multas";
+            public static string dominio = "gobdigital.com";
 #endif
         #endregion
 

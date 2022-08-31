@@ -23,7 +23,7 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.vecinoconcepcion"
+	.asciz	"com.multasdesarrollo"
 	.size	.L.env.str.1, 21
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"6e85c834-a1b4-48e2-bb58-e6f20271c989"
+	.asciz	"f51fdda8-d9c7-452b-bc43-6b2e742b25ab"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

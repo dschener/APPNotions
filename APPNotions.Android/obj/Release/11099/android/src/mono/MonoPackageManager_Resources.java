@@ -20,6 +20,8 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.SwipeRefreshLayout.dll",
 		"Xamarin.AndroidX.ViewPager.dll",
 		"Xamarin.Google.Android.Material.dll",
+		"APPNotions.Android.dll",
+		"APPNotions.dll",
 		"FormsViewGroup.dll",
 		"OneSignal.Android.Binding.dll",
 		"OneSignalSDK.Xamarin.Core.dll",
@@ -48,8 +50,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Kotlin.StdLib.dll",
 		"Xamarin.Kotlin.StdLib.Jdk7.dll",
 		"Xamarin.Kotlin.StdLib.Jdk8.dll",
-		"APPNotions.Android.dll",
-		"APPNotions.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

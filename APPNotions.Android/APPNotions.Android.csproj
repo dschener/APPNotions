@@ -54,7 +54,7 @@
     <MandroidI18n />
     <AndroidSupportedAbis />
     <AndroidR8ExtraArguments>--no-tree-shaking</AndroidR8ExtraArguments>
-    <AndroidPackageFormat>aab</AndroidPackageFormat>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
