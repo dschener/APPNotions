@@ -1,6 +1,6 @@
-﻿#define MUN_DESARROLLO
-#define AMB_DESARROLLO
-#define MOD_MULTAS
+﻿#define MUN_CONCEPCION
+#define AMB_PRODUCCION
+#define MOD_VECINODIGITAL
 
 namespace APPNotions
 {
