@@ -4988,7 +4988,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\d.schener\\.nuget\\packages\\": {},
+    "C:\\Users\\m.mansilla\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
@@ -4997,7 +4997,7 @@
       "projectUniqueName": "M:\\_David\\APPNotions\\APPNotions.Android\\APPNotions.Android.csproj",
       "projectName": "APPNotions.Android",
       "projectPath": "M:\\_David\\APPNotions\\APPNotions.Android\\APPNotions.Android.csproj",
-      "packagesPath": "C:\\Users\\d.schener\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\m.mansilla\\.nuget\\packages\\",
       "outputPath": "M:\\_David\\APPNotions\\APPNotions.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
@@ -5005,7 +5005,7 @@
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\d.schener\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m.mansilla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
