@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="17" android:versionName="1.3.1" package="com.vecinodigitalnogoya" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
-	<application android:label="Vecino Digital Nogoya" android:theme="@style/MainTheme" android:usesCleartextTraffic="true">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="16" android:versionName="1.3.1" package="com.movilparkingmerlo" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="31" />
+	<application android:label="MovilParking Merlo" android:theme="@style/MainTheme" android:usesCleartextTraffic="true">
 		<provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
 			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
 		</provider>
