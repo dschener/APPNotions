@@ -113,6 +113,9 @@ namespace APPNotions
 #if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_MOVPARK
         public static string urlLogin = "https://venadotuerto-desarrollo.movilparking.com/vecino/app-new/login?appVersion=" + appVersion;
 #endif
+#if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_CONTROLADOR
+        public static string urlLogin = "http://desarrollo.movilparking.com/controlador/login?appVersion=" + appVersion;
+#endif
         #endregion
 
         #region oneSignalKey
@@ -204,7 +207,10 @@ namespace APPNotions
         public static string ambiente = "Produccion";
 #endif
 #if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_MOVPARK
-        public static string oneSignalKey = "b3e2811a-523e-41d7-bc1c-e70d6a397cfc";
+        public static string oneSignalKey = "fa4237ee-9d51-4cfb-a3af-cbd132f8b6a6";
+#endif
+#if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_CONTROLADOR
+        public static string oneSignalKey = "597a6f2d-11da-4943-8905-5635299276ac";
 #endif
 #if AMB_DESARROLLO
         public static string ambiente = "Desarrollo";
@@ -242,8 +248,8 @@ namespace APPNotions
         public static string dominio = "gobdigital.com";
 #endif
 #if MOD_CONTROLADOR
-            public static string modulo = "Controlador";
-            public static string dominio = "movilparking.com";
+        public static string modulo = "Controlador";
+        public static string dominio = "movilparking.com";
 #endif
 #if MOD_MULTAS
             public static string modulo = "Multas";
