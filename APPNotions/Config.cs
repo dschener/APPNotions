@@ -1,4 +1,4 @@
-﻿#define MUN_MERLO
+﻿#define MUN_VENADOTUERTO
 #define AMB_PRODUCCION
 #define MOD_MOVPARK
 
@@ -108,13 +108,16 @@ namespace APPNotions
         public static string urlLogin = "https://nogoya.gobdigital.com.ar/web/vecino/app/login?appVersion=" + appVersion;
 #endif
 #if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MULTAS
-        public static string urlLogin = "http://desarrollo.gobdigital.com.ar/juzgadofaltas/app-multas/login?appVersion=" + appVersion;
+        public static string urlLogin = "http://desarrollo-jujuy.gobdigital.com.ar/juzgadofaltas/app-multas/login?appVersion=" + appVersion;
 #endif
 #if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_MOVPARK
         public static string urlLogin = "https://venadotuerto-desarrollo.movilparking.com/vecino/app-new/login?appVersion=" + appVersion;
 #endif
 #if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_CONTROLADOR
         public static string urlLogin = "http://desarrollo.movilparking.com/controlador/login?appVersion=" + appVersion;
+#endif
+#if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_MOVPARK
+        public static string urlLogin = "https://venadotuerto.movilparking.com/vecino/app-new/login?appVersion=" + appVersion;
 #endif
         #endregion
 
@@ -211,6 +214,9 @@ namespace APPNotions
 #endif
 #if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_CONTROLADOR
         public static string oneSignalKey = "597a6f2d-11da-4943-8905-5635299276ac";
+#endif
+#if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_MOVPARK
+        public static string oneSignalKey = "b9e8bd52-1e4c-413f-9036-d88affe0a511";
 #endif
 #if AMB_DESARROLLO
         public static string ambiente = "Desarrollo";
