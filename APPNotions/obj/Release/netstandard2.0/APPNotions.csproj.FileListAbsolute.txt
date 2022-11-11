@@ -2,7 +2,6 @@ M:\_David\APPNotions\APPNotions\bin\Release\netstandard2.0\APPNotions.deps.json
 M:\_David\APPNotions\APPNotions\bin\Release\netstandard2.0\APPNotions.dll
 M:\_David\APPNotions\APPNotions\bin\Release\netstandard2.0\ref\APPNotions.dll
 M:\_David\APPNotions\APPNotions\bin\Release\netstandard2.0\APPNotions.pdb
-M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\APPNotions.csproj.AssemblyReference.cache
 M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\App.xaml.g.cs
 M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\MainPage.xaml.g.cs
 M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\APPNotions.AssemblyInfoInputs.cache
@@ -12,3 +11,4 @@ M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\XamlC.stamp
 M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\APPNotions.dll
 M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\ref\APPNotions.dll
 M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\APPNotions.pdb
+M:\_David\APPNotions\APPNotions\obj\Release\netstandard2.0\APPNotions.csproj.AssemblyReference.cache

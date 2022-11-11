@@ -1,6 +1,6 @@
 ﻿#define MUN_VENADOTUERTO
 #define AMB_PRODUCCION
-#define MOD_MOVPARK
+#define MOD_CONTROLADOR
 
 namespace APPNotions
 {
@@ -119,6 +119,9 @@ namespace APPNotions
 #if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_MOVPARK
         public static string urlLogin = "https://venadotuerto.movilparking.com/vecino/app-new/login?appVersion=" + appVersion;
 #endif
+#if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_CONTROLADOR
+        public static string urlLogin = "http://venadotuerto.movilparking.com/controlador/login?appVersion=" + appVersion;
+#endif
         #endregion
 
         #region oneSignalKey
@@ -220,6 +223,9 @@ namespace APPNotions
 #endif
 #if AMB_DESARROLLO
         public static string ambiente = "Desarrollo";
+#endif
+#if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_CONTROLADOR
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
 #endif
 
         #endregion
