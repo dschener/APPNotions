@@ -6,6 +6,8 @@ BUILDING_apk_compilados
 *.cer
 autorizacion_esperanza_vecino_digital.pdf
 *~$*
-*Certificados/*
+*Certificados*/*
+~$*
 Contrase*.docx
 *clave*.txt
+*.p12
