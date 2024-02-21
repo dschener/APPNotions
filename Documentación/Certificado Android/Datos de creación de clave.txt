@@ -1,5 +1,0 @@
-Al ejecutar este comando (generación de clave):
-keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
-Ingresé esto:
-Pass: 123456777
-Otros datos: ¿Es correcto CN=Notions Group, OU=Notions Group, O=Notions Group, L=Esperanza, ST=Santa Fe, C=AR?
