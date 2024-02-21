@@ -1,3 +1,9 @@
 APPNotions.Android\hs_err_pid29272.mdmp
 bin
 obj
+BUILDING_apk_compilados
+.vs
+*.cer
+autorizacion_esperanza_vecino_digital.pdf
+*~$*
+*Certificados/*
