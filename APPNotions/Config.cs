@@ -1,12 +1,11 @@
-﻿#define MUN_VENADOTUERTO
+﻿#define MUN_ALEM
 #define AMB_PRODUCCION
-#define MOD_CONTROLADOR
-
+#define MOD_GDA_CIUDADANO
 namespace APPNotions
 {
     static class Config
     {
-        private static string appVersion = "17";
+        private static string appVersion = "20";
         // Version 16 (Version Name 1.3.1): Si no tiene activo GPS o no da permisos, mando coordenadas 0,0
         // Version 15 (Version Name 1.3): Corregido OneSignal (app cerraba en notificationreceived), y mejoras en notificaciones y lectura posición GPS entre otras
         // Version 13 (Version Name 1.2): Soporte android 12
@@ -14,7 +13,27 @@ namespace APPNotions
         // Version  8 (Version Name 1.0): Primera Version React Native
         // Cómo decidir códigos de versión: https://ed.team/blog/como-se-deciden-las-versiones-del-software
         #region urlLogin
-
+#if  MUN_ALEM && AMB_PRODUCCION && MOD_GDA_CIUDADANO
+        public static string urlLogin = "https://alem.gobdigital.com.ar/CiudadanoApp/index?app=true&appVersion=" + appVersion;
+#endif
+#if  MUN_TAFIVIEJO && AMB_PRODUCCION && MOD_MOVPARK_CONTROLADOR
+        public static string urlLogin = "https://tafiviejo.movilparking.com/controladorAPP/login?app=true&appVersion=" + appVersion;
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MOVPARK_CIUDADANO
+        public static string urlLogin = "https://app.movilparking.com/CiudadanoAPP/login?app=true&appVersion=" + appVersion;
+#endif
+#if MUN_TAFIVIEJO && AMB_PRODUCCION && MOD_MOVPARK_CIUDADANO
+        public static string urlLogin = "https://tafiviejo.movilparking.com/CiudadanoAPP/login?app=true&appVersion=" + appVersion;
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MOVPARK_CONTROLADOR
+        public static string urlLogin = "https://app.movilparking.com/ControladorApp/login?app=true&appVersion=" + appVersion;
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_GDA_CIUDADANO
+            public static string urlLogin = "https://gda.gobdigital.com.ar/CiudadanoApp/index?app=true&appVersion=" + appVersion;
+#endif
+#if MUN_TRANSPORTEROMERO && AMB_PRODUCCION && MOD_TRANSPORTE
+        public static string urlLogin = "https://transporteromero.boleteriadigital.com.ar/vecino/app/login?appVersion=" + appVersion;
+#endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRASFUNCIONARIOS
         public static string urlLogin = "https://esperanza.gobdigital.com.ar/compras/login?appVersion=" + appVersion;
 #endif
@@ -114,7 +133,7 @@ namespace APPNotions
         public static string urlLogin = "https://venadotuerto-desarrollo.movilparking.com/vecino/app-new/login?appVersion=" + appVersion;
 #endif
 #if MUN_VENADOTUERTO && AMB_DESARROLLO && MOD_CONTROLADOR
-        public static string urlLogin = "http://desarrollo.movilparking.com/controlador/login?appVersion=" + appVersion;
+        public static string urlLogin = "http://desa.movilparking.com/controlador/login?appVersion=" + appVersion;
 #endif
 #if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_MOVPARK
         public static string urlLogin = "https://venadotuerto.movilparking.com/vecino/app-new/login?appVersion=" + appVersion;
@@ -122,9 +141,57 @@ namespace APPNotions
 #if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_CONTROLADOR
         public static string urlLogin = "http://venadotuerto.movilparking.com/controlador/login?appVersion=" + appVersion;
 #endif
+#if MUN_MERLO && AMB_PRODUCCION && MOD_CONTROLADOR
+        public static string urlLogin = "http://merlo.movilparking.com/controlador/login?appVersion=" + appVersion;
+#endif
+#if MUN_LAMARQUE && AMB_PRODUCCION && MOD_MULTAS
+        public static string urlLogin = "http://lamarque.gobdigital.com.ar/juzgadofaltas/app-multas/login?appVersion=" + appVersion;
+#endif
+#if MUN_POSADAS && AMB_PRODUCCION && MOD_MULTAS
+        public static string urlLogin = "http://posadas.gobdigital.com.ar/juzgadofaltas/app-multas/login?appVersion=" + appVersion;
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_BOLETERIA
+        public static string urlLogin = "https://victoria-desarrollo.boleteriadigital.com.ar/validar/default?app=true" + appVersion;
+#endif
+#if MUN_DESAMULTAS && AMB_DESARROLLO && MOD_MULTAS
+        public static string urlLogin = "https://desarrollo.gobdigital.com.ar/juzgadofaltas/app-multas/login?app=true" + appVersion;
+#endif
+#if MUN_DESAMULTAS && AMB_DESARROLLO && MOD_UROVO
+        public static string urlLogin = "http://desa.gobdigital.com.ar/juzgadofaltas/app_multas/causa-print/login?app=true" + appVersion;
+#endif
+#if MUN_LUJAN && AMB_DESARROLLO && MOD_CONTROLADOR
+        public static string urlLogin = "https://desa-lujan.movilparking.com/controlador/login?app=true" + appVersion;
+#endif
+#if MUN_RADATILLY && AMB_PRODUCCION && MOD_MULTAS
+        public static string urlLogin = "https://radatilly.gobdigital.com.ar/juzgadofaltas/app-multas/login?app=true" + appVersion;
+#endif
+#if MUN_GDA && AMB_PRODUCCION && MOD_GDA
+            public static string urlLogin = "https://gda.gobdigital.com.ar/CiudadanoApp/index?app=true" + appVersion;
+#endif
         #endregion
 
         #region oneSignalKey
+#if MUN_ALEM && AMB_PRODUCCION && MOD_GDA_CIUDADANO
+        public static string oneSignalKey = "ffdbce16-8162-4f00-9f30-99eb8af4deba";
+#endif
+#if MUN_TAFIVIEJO && AMB_PRODUCCION && MOD_MOVPARK_CONTROLADOR
+        public static string oneSignalKey = "89762c81-e984-49ff-858b-908a9e60ef8d";
+#endif
+#if MUN_TAFIVIEJO && AMB_PRODUCCION && MOD_MOVPARK_CIUDADANO
+        public static string oneSignalKey = "25c42a2a-5980-43ca-904e-3e1e6aa5c430";
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MOVPARK_CIUDADANO
+        public static string oneSignalKey = "8e2febce-dc2d-4c4b-b5fc-71fb2229673b";
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_MOVPARK_CONTROLADOR
+        public static string oneSignalKey = "a4d4e88c-e519-47d7-a1dc-61108b72aa22";
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_GDA_CIUDADANO
+            public static string oneSignalKey = "129ec209-9f8c-465a-a8f1-12d5d052b4d5";
+#endif
+#if MUN_TRANSPORTEROMERO && AMB_PRODUCCION && MOD_TRANSPORTE
+        public static string oneSignalKey = "2158f7f7-7d26-4234-9ad7-f074b77844c5";
+#endif
 #if MUN_ESPERANZA && AMB_PRODUCCION && MOD_COMPRASFUNCIONARIOS
         public static string oneSignalKey = "2158f7f7-7d26-4234-9ad7-f074b77844c5";
 #endif
@@ -227,10 +294,53 @@ namespace APPNotions
 #if MUN_VENADOTUERTO && AMB_PRODUCCION && MOD_CONTROLADOR
         public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
 #endif
+#if MUN_MERLO && AMB_PRODUCCION && MOD_CONTROLADOR
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_LAMARQUE && AMB_PRODUCCION && MOD_MULTAS
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_POSADAS && AMB_PRODUCCION && MOD_MULTAS
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_DESARROLLO && AMB_DESARROLLO && MOD_BOLETERIA
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_DESAMULTAS && AMB_DESARROLLO && MOD_MULTAS
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_DESAMULTAS && AMB_DESARROLLO && MOD_UROVO
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_LUJAN && AMB_DESARROLLO && MOD_CONTROLADOR
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_RADATILLY && AMB_PRODUCCION && MOD_MULTAS
+        public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
+#if MUN_GDA && AMB_PRODUCCION && MOD_GDA
+            public static string oneSignalKey = "c2917484-05b1-4694-838e-1571dd4b6868";
+#endif
 
         #endregion
 
         #region Dominio y Modulo
+#if MOD_MOVPARK_CIUDADANO
+        public static string modulo = "MovilPark Ciudadano";
+        public static string dominio = "movilparking.com";
+#endif
+#if MOD_MOVPARK_CONTROLADOR
+        public static string modulo = "MovilPark Controlador";
+        public static string dominio = "movilparking.com";
+#endif
+#if MOD_GDA_CIUDADANO
+        public static string modulo = "MOD_GDA_CIUDADANO";
+        public static string dominio = "gobdigital.com.ar";
+#endif
+#if MOD_TRANSPORTE
+        public static string modulo = "Transporte Digital";
+        public static string dominio = "boleteriadigital.com.ar";
+#endif
 #if MOD_COMPRASFUNCIONARIOS
             public static string modulo = "Compras Funcionarios";
             public static string dominio = "gobdigital.com.ar";
@@ -249,23 +359,35 @@ namespace APPNotions
 #endif
 #if MOD_COMPRAS
         public static string modulo = "COMPRAS";
-        public static string dominio = "gobdigital.com";
+        public static string dominio = "gobdigital.com.ar";
 #endif
 #if MOD_VECINODIGITAL
         public static string modulo = "Vecino Digital";
-        public static string dominio = "gobdigital.com";
+        public static string dominio = "gobdigital.com.ar";
 #endif
 #if MOD_GESTIONCOCHERAS
         public static string modulo = "Gestión Cocheras";
-        public static string dominio = "gobdigital.com";
+        public static string dominio = "gobdigital.com.ar";
 #endif
 #if MOD_CONTROLADOR
         public static string modulo = "Controlador";
-        public static string dominio = "movilparking.com";
+        public static string dominio = "movilparking.com.ar";
 #endif
 #if MOD_MULTAS
-            public static string modulo = "Multas";
-            public static string dominio = "gobdigital.com";
+        public static string modulo = "Multas";
+        public static string dominio = "gobdigital.com.ar";
+#endif
+#if MOD_BOLETERIA
+        public static string modulo = "Boleteria Digital";
+        public static string dominio = "gobdigital.com.ar";
+#endif
+#if MOD_UROVO
+        public static string modulo = "Urovo";
+        public static string dominio = "gobdigital.com.ar";
+#endif
+#if MOD_GDA
+            public static string modulo = "Gobierno Digital Abierto";
+            public static string dominio = "gobdigital.com.ar";
 #endif
         #endregion
 

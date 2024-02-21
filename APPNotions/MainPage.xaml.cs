@@ -13,6 +13,8 @@ using System.Net;
 using System.IO;
 using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
+using Plugin.Printing;
+using APPNotions.Service;
 
 namespace APPNotions
 {
@@ -68,7 +70,7 @@ namespace APPNotions
                 bool isWebDominio = UrlNavegacion.Contains(Config.dominio);
                 bool isCoordenadas = UrlNavegacion.Contains("Coordenadas=Coordenadas");
                 bool isFoto = UrlNavegacion.Contains("action=PHOTO");
-
+                bool isPrint = UrlNavegacion.Contains("print=");
                 NavigationPage.SetHasNavigationBar(this, !isWebDominio || isTargetBack);
                 #region Push OneSignal
                 if (UrlNavegacion.Contains("token"))
@@ -229,6 +231,15 @@ namespace APPNotions
 
                         }
                     }
+                    #region prueba de jars
+                    if (isPrint)
+                    {
+                        string urlPrint = GetValueAndRemoveFromQueryStringByKey(ref UrlNavegacion, "print");
+
+                        DependencyService.Get<IUrovoPrinterDependency>().print("Hola Mundo");
+
+                    }
+                    #endregion
                 }
             }
             else
@@ -337,6 +348,11 @@ namespace APPNotions
                     await Navegador.EvaluateJavaScriptAsync("document.getElementById('" + param2 + "Img').src='data:image/png;base64," + result + "';");
                 }
             }
+        }
+
+        private void Navegador_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+
         }
 
     }

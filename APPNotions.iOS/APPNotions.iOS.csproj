@@ -38,6 +38,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
     <MtouchFloat32>false</MtouchFloat32>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -141,6 +142,9 @@
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
       <Version>4.0.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Printing">
+      <Version>0.0.13.1</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugins.Messaging">
       <Version>5.2.0</Version>

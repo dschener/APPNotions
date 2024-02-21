@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Simulator</SelectedDevice>
     <ActiveDebugProfile>Simulator</ActiveDebugProfile>
+    <SelectedPlatformGroup>Simulator</SelectedPlatformGroup>
   </PropertyGroup>
 </Project>

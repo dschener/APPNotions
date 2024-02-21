@@ -9,7 +9,7 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <StackLayout>
-        <WebView x:Name="Navegador" Navigating="Navegador_Navigating" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ></WebView>
+        <WebView x:Name="Navegador" Navigating="Navegador_Navigating" Navigated="Navegador_Navigated" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ></WebView>
         <Grid x:Name="EsperandoGPS" IsVisible="false">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />

@@ -15,6 +15,7 @@ if !index!==1 set "index=2"
 )
 :salir
 set ruta=Recursos\%ambiente:~8,25%\%municipio:~11,25%\%modulo:~8,25%
+
 copy !ruta!\AndroidManifest.xml APPNotions.Android\Properties\AndroidManifest.xml
 copy !ruta!\AssemblyInfo.cs APPNotions.Android\Properties\AssemblyInfo.cs
 copy !ruta!\Info.plist APPNotions.iOS\Info.plist
